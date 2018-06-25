@@ -1,0 +1,23 @@
+{
+  "name": "web-starter",
+  "version": "0.0.1",
+  "description": "Front end development starter guide",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server ./src -p 3100 -c-1",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/avine/web-starter.git"
+  },
+  "author": "Stéphane Francel <contact@avine.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/avine/web-starter/issues"
+  },
+  "homepage": "https://github.com/avine/web-starter#readme",
+  "devDependencies": {
+    "http-server": "^0.11.1"
+  }
+}

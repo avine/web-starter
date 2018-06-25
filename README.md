@@ -1,2 +1,3 @@
-# web-starter
+# WebStarter
+
 Front end development starter guide
