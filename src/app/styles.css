@@ -1,7 +1,53 @@
-#title {
-  color: dodgerblue;
+html {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  line-height: 1.4rem;
 }
 
-.underline {
-  border-bottom: 1px solid #ddd;
+body {
+  margin: 2rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 1.5rem 0 1rem 0;
+  line-height: 1.4em;
+  font-weight: 600;
+}
+
+h1 {
+  font-weight: 200;
+}
+
+h3 {
+  font-weight: 400;
+}
+
+p {
+  margin: 1.5rem 0 1rem 0;
+}
+
+a {
+  color: #999;
+}
+
+fieldset {
+  margin: 1.5rem 0 1rem 0;
+  padding: 1.4em;
+  border: 1px solid #ddd;
+}
+
+legend {
+  padding: 0 0.5rem;
+  color: #999;
+}
+
+input {
+  border: 1px solid #ddd;
+  padding: 0 0.5rem;
+  line-height: 1.5rem;
+}
+
+input[type="submit"],
+input[type="reset"] {
+  background-color: #eee;
 }

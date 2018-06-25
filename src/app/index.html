@@ -10,77 +10,52 @@
   <base href="/app/">
 
   <link rel="shortcut icon" href="./favicon.ico">
-
   <link rel="stylesheet" href="./styles.css">
 
   <script type="text/javascript" src="./script.js"></script>
-
+<body>
   <style>
-    html {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      font-size: 14px;
-      line-height: 1.4rem;
+    #title {
+      color: dodgerblue;
     }
 
-    body {
-      margin: 2rem;
-    }
-
-    h1, h2, h3, h4, h5, h6 {
-      margin: 1.5rem 0 1rem 0;
-      line-height: 1.4em;
-      font-weight: 600;
-    }
-
-    h1 {
-      font-weight: 200;
-    }
-
-    h3 {
-      font-weight: 400;
-    }
-
-    hr {
-      margin: 1.5rem 0 1rem 0;
-      border: none;
-      border-top: 1px solid #ddd;
-    }
-
-    p {
-      margin: 1.5rem 0 1rem 0;
-    }
-
-    a {
-      color: #999;
-    }
-
-    fieldset {
-      margin: 1.5rem 0 1rem 0;
-      padding: 1.4em;
-      border: 1px solid #ddd;
-    }
-
-    legend {
-      padding: 0 0.5rem;
-      color: #999;
-    }
-
-    input {
-      border: 1px solid #ddd;
-      padding: 0 0.5rem;
-      line-height: 1.5rem;
-    }
-
-    input[type="submit"],
-    input[type="reset"] {
-      background-color: #eee;
+    .underline {
+      border-bottom: 1px solid #ddd;
     }
   </style>
-<body>
+
+  <script>
+    window.addEventListener('load', function (event) {
+      const title = document.getElementById('title');
+      title.classList.add('underline');
+    });
+  </script>
+
   <h1 id="title">Welcome to WebStarter</h1>
 
   <h2>Lorem ipsum dolor sit amet</h2>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  <p
+    style="font-style:italic; cursor:pointer;"
+    onclick="toggleHighlight(this, event);">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </p>
+
+  <style>
+    .highlight {
+      background-color: antiquewhite;
+    }
+  </style>
+
+  <script>
+    function toggleHighlight(element, event) {
+      console.log('Element', element);
+      console.log('Event', event);
+      element.classList.toggle('highlight');
+    }
+  </script>
 
   <h2>Sed ut perspiciatis unde omnis</h2>
   <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
@@ -106,6 +81,10 @@
 
       <input type="submit" value="Submit">
       <input type="reset" value="Reset">
+
+      <br>
+      <label for="prevent-default">Prevent default</label>
+      <input id="prevent-default" type="checkbox" name="prevent-default" checked>
     </fieldset>
   </form>
 </html>
