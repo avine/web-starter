@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/avine/web-starter#readme",
   "devDependencies": {
+    "eslint": "^5.0.0",
     "http-server": "^0.11.1"
   }
 }

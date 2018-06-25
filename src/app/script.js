@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function (event) {
+document.addEventListener('DOMContentLoaded', function () {
   const preventDefault = document.getElementById('prevent-default');
 
   const form = document.getElementById('contact');
@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
   form.addEventListener('submit', function (event) {
     if (preventDefault.checked) {
       event.preventDefault();
-      console.log(event);
+      console.log(event); // eslint-disable-line no-console
     }
   });
 });
