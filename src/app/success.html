@@ -12,7 +12,13 @@
   <link rel="shortcut icon" href="./favicon.ico">
   <link rel="stylesheet" href="./styles.css">
 <body>
-  <h1>Thank you :)</h1>
+  <h1>Thank you <strong id="view-nickname"></strong> :)</h1>
+
+  <script>
+     const url = new URL(location.href);
+     const nickname = url.searchParams.get('nickname');
+     document.getElementById('view-nickname').innerText = nickname;
+  </script>
 
   <p><a href="./index.html">&#8592; Back</a></p>
 </html>

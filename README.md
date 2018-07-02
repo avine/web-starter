@@ -2,7 +2,13 @@
 
 Front end development starter guide
 
+## Prerequisites
+
+You installed [nodejs](https://nodejs.org) on your machine.
+
 ## Usage
+
+Open the terminal and execute the commands:
 
 ```bash
 # Install package dependencies

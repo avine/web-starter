@@ -1,11 +1,12 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const preventDefault = document.getElementById('prevent-default');
+  const preventDefaultCheckbox = document.getElementById('prevent-default');
 
   const form = document.getElementById('contact');
 
   form.addEventListener('submit', function (event) {
-    if (preventDefault.checked) {
+    if (preventDefaultCheckbox.checked) {
       event.preventDefault();
+      alert('Default event prevented!');
       console.log(event); // eslint-disable-line no-console
     }
   });
