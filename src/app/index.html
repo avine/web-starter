@@ -32,6 +32,26 @@
 
   <h1 id="title">Welcome to WebStarter</h1>
 
+  <blockquote>
+    A browser is a software application for accessing information on the World Wide Web.<br>
+    Each individual web page, image, and video is identified by a distinct URL, enabling browsers to retrieve and display them on the user's device.<br>
+    <cite>(wikipedia)</cite>
+  </blockquote>
+
+  <blockquote>
+    You are not here to learn HTML, CSS or JavaScript.<br>
+    So what!<br>
+    You are here to take a look at how these technologies are connected to each other in the browser...<br>
+    <cite>(me ;-)</cite>
+  </blockquote>
+
+  <p>
+    The browser engine is capable of interpreting an <b>HTML</b> document to build the DOM (Document Object Model), that is to say the web page.<br>
+    The DOM can be then accessed and manipulated by <b>CSS</b> and <b>JavaScript</b> technologies through an API made available by the browser.
+  </p>
+
+  <hr>
+
   <h2>Lorem ipsum dolor sit amet</h2>
 
   <!-- Inline style and script -->
@@ -50,6 +70,8 @@
   </style>
 
   <script>
+    // Notice: the following function is available in the global scope.
+    // `window.toggleHighlight`!
     function toggleHighlight(element, event) {
       console.log('Element', element);
       console.log('Event', event);
@@ -98,4 +120,12 @@
       &#9758; Toggle stylesheet
     </a>
   </p>
+
+  <hr>
+
+  <blockquote>
+    So what's the problem?<br>
+    This way of coding is not scalable!
+    It's obvious that what we are missing here is called <b>"modularization"</b>!
+  </blockquote>
 </html>

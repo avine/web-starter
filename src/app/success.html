@@ -15,9 +15,14 @@
   <h1>Thank you <strong id="view-nickname"></strong> :)</h1>
 
   <script>
-     const url = new URL(location.href);
-     const nickname = url.searchParams.get('nickname');
-     document.getElementById('view-nickname').innerText = nickname;
+    // Notice: IIFE (Immediately Invoked Function Expression)
+    // is a JavaScript function that runs as soon as it is defined.
+    (function () {
+      // The constants `url` and `nickname` does not pollute the global scope!
+      const url = new URL(location.href);
+      const nickname = url.searchParams.get('nickname');
+      document.getElementById('view-nickname').innerText = nickname;
+    }());
   </script>
 
   <p><a href="./index.html">&#8592; Back</a></p>
