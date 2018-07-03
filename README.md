@@ -2,6 +2,8 @@
 
 Front end development starter guide
 
+## Purpose
+
 > A browser is a software application for accessing information on the World Wide Web.
 Each individual web page, image, and video is identified by a distinct URL, enabling browsers to retrieve and display them on the user's device (wikipedia).
 
@@ -19,7 +21,7 @@ But the DOM only represent the rendered document on the user's device! Do we hav
 
 It's called the BOM (Browser Object Model). In other words, the DOM is just a part the BOM.
 
-Here are the main properties of the window context:
+*Here are the main properties of the window context:*
 
 - navigator
 - screen
