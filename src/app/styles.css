@@ -1,11 +1,13 @@
 html {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.4rem;
 }
 
 body {
-  margin: 2rem;
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 0 2rem;
 }
 
 hr {
@@ -36,11 +38,12 @@ a {
   color: #999;
 }
 
-blockquote {
-  margin: 1rem 2rem;
+/*blockquote {
+  margin: 1.5rem 2rem;
   padding-left: 1rem;
   border-left: 4px solid #eee;
-}
+  color: lightslategray;
+}*/
 
 fieldset {
   margin: 1.5rem 0 1rem 0;
