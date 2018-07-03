@@ -2,10 +2,12 @@
   Selector
 
   A CSS selector allow you to select elements in the DOM.
-  It is equivalent to `document.getElementById` for JavaScript!
+  It is equivalent to `document.getElementById` in JavaScript!
 */
 html {
-  /*  Rules to apply on the selected element(s) */
+  /*
+    Rules to apply on the selected element(s)
+  */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 15px;
   line-height: 1.4rem;
