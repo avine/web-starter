@@ -15,10 +15,10 @@ So, what is our definition of the browser?
 
 > The browser is an engine capable of interpreting an **HTML** document to build the DOM (Document Object Model), that is to say the web page (me ;-).
 
-The DOM can then be accessed and manipulated by **CSS** and **JavaScript** technologies through an API made available by the browser.
+The DOM can then be accessed and manipulated by **CSS** and **JavaScript** through an API made available by the browser.
 
 But the DOM only represent the rendered document on the user's device!
-Does the browser give us information about itself, or possibly about the user's device?
+Does the browser give us information about itself as a software, or possibly about the user's device?
 
 The answer is, yes!
 
