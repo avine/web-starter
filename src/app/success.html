@@ -12,7 +12,11 @@
   <link rel="shortcut icon" href="./favicon.ico">
   <link rel="stylesheet" href="./styles.css">
 <body>
-  <h1>Thank you <strong id="view-nickname"></strong> :)</h1>
+  <h1>
+    Thank you
+    <strong id="view-nickname"></strong>
+    :)
+  </h1>
 
   <script>
     // Notice: IIFE (Immediately Invoked Function Expression)
@@ -25,5 +29,26 @@
     }());
   </script>
 
-  <p><a href="./index.html">&#8592; Back</a></p>
+  <hr>
+
+  <blockquote>A last lesson before we go... :)</blockquote>
+
+  <h2>Class inheritance for the &lt;body&gt; tag:</h2>
+
+  <ul id="body-inheritance"></ul>
+
+  <!-- Open the browser console and find the following informations in "Elements > Properties" tab -->
+  <script>
+    const ul = document.getElementById('body-inheritance');
+    let proto = document.getElementsByTagName('body')[0];
+    while (proto = Object.getPrototypeOf(proto)) {
+      const li = document.createElement('li');
+      li.innerText = proto.constructor.name;
+      ul.appendChild(li);
+    }
+  </script>
+
+  <p>
+    <a href="./index.html">&#8592; Back</a>
+  </p>
 </html>

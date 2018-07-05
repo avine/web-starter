@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
   const preventDefaultCheckbox = document.getElementById('prevent-default');
 
-  const form = document.getElementById('contact');
+  const form = document.getElementById('keep-in-touch');
 
   form.addEventListener('submit', function (event) {
     if (preventDefaultCheckbox.checked) {

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <meta name=viewport content="width=device-width,initial-scale=1">
+  <meta name="author" content="Stéphane Francel">
+  <meta name="description" content="Front end development starter guide">
+
+  <title>WebStarter</title>
+
+  <base href="/app/">
+
+  <link rel="shortcut icon" href="./favicon.ico">
+</head>
+
+<body>
+  <h1>Welcome to WebStarter</h1>
+
+  <blockquote>View the source code to understand what's going on...</blockquote>
+
+  <h2>Click on the paragraph below...</h2>
+
+  <!-- Inline style and script -->
+  <p
+    style="font-style:italic; cursor:pointer;"
+    onclick="toggleHighlight(this, event);"
+    title="Click me to change my background-color">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  </p>
+
+  <!-- Internal style and script -->
+  <style media="screen">
+    .highlight {
+      background-color: antiquewhite;
+    }
+  </style>
+  <script>
+    // Notice:
+    // The following function is defined in the global scope.
+    // `toggleHighlight` is equivalent to `this.toggleHighlight` where `this` refers to `window`!
+    //
+    // In the paragraph above (<p>), the `onclick` attribute is executed in another context!
+    // When you click on the paragraph, the string `toggleHighlight(this, event);` is executed as JavaScript code.
+    // And `this` refers to the paragraph tag itself and `event` is a special variable that refers to the click event itself.
+    function toggleHighlight(element, event) {
+      console.log('Element', element);
+      console.log('Event', event);
+      element.classList.toggle('highlight');
+    }
+  </script>
+
+  <!-- Form using a classic round trip -->
+  <form action="./success.html" method="GET" id="keep-in-touch">
+    <fieldset>
+      <legend>Let's keep in touch</legend>
+
+      <label for="prevent-default">Prevent default</label>
+      <input id="prevent-default" type="checkbox" name="prevent-default" checked>
+
+      <p>
+        <label>
+          Enter your nickname
+          <input type="text" name="nickname" placeholder="Steph">
+        </label>
+      </p>
+
+      <input type="submit" value="Submit">
+      <input type="reset" value="Reset">
+    </fieldset>
+  </form>
+
+  <!-- External style and script -->
+  <link rel="stylesheet" href="./styles.css" media="all" data-stylesheet>
+  <script type="text/javascript" src="./script.js"></script>
+</body>
+</html>
