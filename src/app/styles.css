@@ -1,8 +1,8 @@
 /*
   Selector
 
-  A CSS selector allow you to select elements in the DOM.
-  It is equivalent to `document.getElementById` in JavaScript!
+  A CSS selector allow you to select one or more elements in the DOM.
+  The selector `html {}`  is equivalent to `document.getElementByTagName('html')` in JavaScript!
 */
 html {
   /*

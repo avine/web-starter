@@ -12,11 +12,7 @@
   <link rel="shortcut icon" href="./favicon.ico">
   <link rel="stylesheet" href="./styles.css">
 <body>
-  <h1>
-    Thank you
-    <strong id="view-nickname"></strong>
-    :)
-  </h1>
+  <h1>Thank you <strong id="view-nickname"></strong> :)</h1>
 
   <script>
     // Notice: IIFE (Immediately Invoked Function Expression)
@@ -25,13 +21,14 @@
       // The constants `url` and `nickname` does not pollute the global scope!
       const url = new URL(location.href);
       const nickname = url.searchParams.get('nickname');
-      document.getElementById('view-nickname').innerText = nickname;
+      const strong = document.getElementById('view-nickname');
+      strong.innerText = nickname;
     }());
   </script>
 
   <hr>
 
-  <blockquote>A last lesson before we go... :)</blockquote>
+  <blockquote>One last lesson before we leave. :)</blockquote>
 
   <h2>Class inheritance for the &lt;body&gt; tag:</h2>
 
@@ -40,12 +37,16 @@
   <!-- Open the browser console and find the following informations in "Elements > Properties" tab -->
   <script>
     const ul = document.getElementById('body-inheritance');
-    let proto = document.getElementsByTagName('body')[0];
-    while (proto = Object.getPrototypeOf(proto)) {
+    function addListItem(text) {
       const li = document.createElement('li');
-      li.innerText = proto.constructor.name;
+      li.innerText = text;
       ul.appendChild(li);
     }
+
+    let proto = document.getElementsByTagName('body')[0];
+    while (proto = Object.getPrototypeOf(proto)) {
+      addListItem(proto.constructor.name);
+    };
   </script>
 
   <p>

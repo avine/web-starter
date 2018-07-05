@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
 
@@ -13,12 +12,27 @@
   <base href="/app/">
 
   <link rel="shortcut icon" href="./favicon.ico">
+
+  <!-- External style and script -->
+  <link rel="stylesheet" href="./styles.css" media="all" data-stylesheet>
+  <script type="text/javascript" src="./script.js"></script>
 </head>
-
 <body>
-  <h1>Welcome to WebStarter</h1>
+  <!-- Internal style and script -->
+  <style media="screen">
+    #title { color: dodgerblue; }
+    .underline { border-bottom: 1px solid #ddd; }
+  </style>
+  <script>
+    window.addEventListener('load', function (event) {
+      const title = document.getElementById('title');
+      title.classList.add('underline');
+    });
+  </script>
 
-  <blockquote>View the source code to understand what's going on...</blockquote>
+  <h1 id="title">Welcome to WebStarter</h1>
+
+  <p><em>View the source code to understand what's going on...</em></p>
 
   <h2>Click on the paragraph below...</h2>
 
@@ -29,14 +43,14 @@
     title="Click me to change my background-color">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
   </p>
 
-  <!-- Internal style and script -->
   <style media="screen">
-    .highlight {
-      background-color: antiquewhite;
-    }
+    .highlight { background-color: antiquewhite; }
   </style>
+
   <script>
     // Notice:
     // The following function is defined in the global scope.
@@ -53,9 +67,11 @@
   </script>
 
   <!-- Form using a classic round trip -->
-  <form action="./success.html" method="GET" id="keep-in-touch">
+  <form action="./success.html" method="GET" id="contact">
     <fieldset>
       <legend>Let's keep in touch</legend>
+
+      <input type="hidden" name="id" value="1">
 
       <label for="prevent-default">Prevent default</label>
       <input id="prevent-default" type="checkbox" name="prevent-default" checked>
@@ -72,8 +88,22 @@
     </fieldset>
   </form>
 
-  <!-- External style and script -->
-  <link rel="stylesheet" href="./styles.css" media="all">
-  <script type="text/javascript" src="./script.js"></script>
-</body>
+  <p>
+    <a href="#" onclick="
+      const stylesheet = document.querySelector('[data-stylesheet]');
+      stylesheet.disabled = !stylesheet.disabled;
+      return false;">
+      &#9758; Toggle stylesheet
+    </a>
+  </p>
+
+  <hr>
+
+  <blockquote>
+    So what's the problem?<br>
+    This way of coding is not scalable!<br>
+    It's obvious that what we are missing here is called <b>"modularization"</b>!<br>
+    <br>
+    <em>Let's go to the next level with <a href="https://github.com/avine/web-explorer">WebExplorer</a>!</em>
+  </blockquote>
 </html>
