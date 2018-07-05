@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,6 +16,7 @@
   <!-- External style and script -->
   <link rel="stylesheet" href="./styles.css" media="all" data-stylesheet>
   <script type="text/javascript" src="./script.js"></script>
+</head>
 <body>
   <!-- Internal style and script -->
   <style media="screen">
@@ -52,8 +52,13 @@
   </style>
 
   <script>
-    // Notice: the following function is available in the global scope.
-    // `window.toggleHighlight`!
+    // Notice:
+    // The following function is defined in the global scope.
+    // `toggleHighlight` is equivalent to `this.toggleHighlight` where `this` refers to `window`!
+    //
+    // In the paragraph above (<p>), the `onclick` attribute is executed in another context!
+    // When you click on the paragraph, the string `toggleHighlight(this, event);` is executed as JavaScript code.
+    // And `this` refers to the paragraph tag itself and `event` is a special variable that refers to the click event itself.
     function toggleHighlight(element, event) {
       console.log('Element', element);
       console.log('Event', event);

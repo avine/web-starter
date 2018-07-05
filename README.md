@@ -9,7 +9,7 @@ Each individual web page, image, and video is identified by a distinct URL, enab
 
 You are not here to learn HTML, CSS or JavaScript. So what!?
 
-You are here to see how these technologies allow you to interact with the browser.
+You are here to see how the browser allows these technologies to interact with it.
 
 So, what is our definition of the browser?
 
@@ -17,21 +17,27 @@ So, what is our definition of the browser?
 
 The DOM can then be accessed and manipulated by **CSS** and **JavaScript** technologies through an API made available by the browser.
 
-But the DOM only represent the rendered document on the user's device! Do we have something that represent the browser itself, that is to say the window ? Yes, of course!
+But the DOM only represent the rendered document on the user's device!
+Does the browser give us information about itself, or possibly about the user's device?
+
+The answer is, yes!
 
 It's called the BOM (Browser Object Model). In other words, the DOM is just a part the BOM.
 
+The BOM is the context, aka the `window`, aka what `this` refers to, in which JavaScript is executed.
+
 *Here are the main properties of the window context:*
 
-- navigator
-- screen
-- location
-- history
-- document
+- screen (the user's device)
+- navigator (the browser as a software)
+- location (the url)
+- history (the history of visited pages)
+- document (the current rendered page)
 
 ## Prerequisites
 
 You installed [nodejs](https://nodejs.org) on your machine.
+We use nodejs to simply start a local web server.
 
 ## Usage
 
@@ -45,4 +51,4 @@ npm install
 npm start
 ```
 
-Next, open your favorite browser and naviagte to `http://127.0.0.1:3100/app/`.
+Next, open your favorite browser and navigate to `http://127.0.0.1:3100/app/`.
