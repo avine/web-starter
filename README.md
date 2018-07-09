@@ -28,7 +28,7 @@ The BOM is the context, aka the `window`, aka what `this` refers to, in which Ja
 
 *Here are the main properties of the window context:*
 
-- screen (the user's device)
+- screen (the user's device - not ther browser window)
 - navigator (the browser as a software)
 - location (the url)
 - history (the history of visited pages)
